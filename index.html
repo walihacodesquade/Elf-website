@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Train Your Elf - Game Interface</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <img src="flowers-corner.png" alt="" class="edge-flower corner-top-left" decoding="async">
+  <img src="flowers-corner.png" alt="" class="edge-flower corner-top-right" decoding="async">
+
+  <div class="wrapper">
+
+    <header class="navbar">
+      <div class="nav-brand">
+        <svg class="leaf-icon" viewBox="0 0 36 28" fill="currentColor">
+          <path d="M18 2C14.5 7 13.5 13 18 22C22.5 13 21.5 7 18 2Z"/>
+          <path d="M5 9C5 15.5 9.5 20.5 16.5 22.5C15.5 15.5 11.5 11 5 9Z"/>
+          <path d="M31 9C24.5 11 20.5 15.5 19.5 22.5C26.5 20.5 31 15.5 31 9Z"/>
+        </svg>
+        <span class="brand-text">HOW TO TRAIN<br><strong>YOUR ELF</strong></span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#home" class="active">Home</a><span class="nav-divider">|</span>
+        <a href="#about">About</a><span class="nav-divider">|</span>
+        <a href="#training">Training</a><span class="nav-divider">|</span>
+        <a href="#challenges">Challenges</a><span class="nav-divider">|</span>
+        <a href="#rewards">Rewards</a><span class="nav-divider">|</span>
+        <a href="#settings">Settings</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-music">
+          <span class="music-icon">▶</span>
+          <audio controls loop preload="none">
+            <source src="music.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <button class="search-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="20" y1="20" x2="16.2" y2="16.2"></line>
+          </svg>
+        </button>
+        <a href="#login" class="login-btn">Login</a>
+      </div>
+    </header>
+
+    <main class="hero-card" id="home">
+      <img src="flower.png" alt="" class="edge-flower fl-nav-left" decoding="async">
+      <img src="flower.png" alt="" class="edge-flower fl-nav-right" decoding="async">
+      <img src="flower.png" alt="" class="edge-flower fl-curve-notch" decoding="async">
+      <img src="flower.png" alt="" class="edge-flower fl-bottom-right" decoding="async">
+
+      <div class="hero-content">
+        <h1 class="hero-title">HOW TO TRAIN<br><span class="title-highlight">YOUR ELF <span class="sparkle">✦</span></span></h1>
+        <p class="hero-description">Step into a magical journey, train your elf, complete challenges and unlock the secrets of the enchanted world!</p>
+        <a href="#start" class="cta-btn">
+          <span>Start Your Journey</span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+      </div>
+
+      <div class="trainer-badge">
+        <span class="badge-star">✦</span>
+        <div class="badge-text"><span>Welcome,</span><strong>Elf Trainer!</strong></div>
+      </div>
+    </main>
+
+    <div class="grid-wrapper">
+
+      <section class="game-card card-create-character">
+        <div class="card-inner">
+          <div class="card-header-with-star"><span class="card-star-icon">✦</span><h2>Create Your Character</h2></div>
+          <p class="card-subtitle">Enter your name and choose your elf identity.</p>
+          <div class="input-group"><input type="text" placeholder="Your Name..." aria-label="Enter Name"></div>
+          <button class="action-btn cta-primary"><span>Create Profile</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+        <div class="character-visual-wrapper chibi-character"><img src="chibi-elf.png" alt="Cute chibi starter elf" loading="lazy" decoding="async"></div>
+      </section>
+
+      <section class="game-card card-about" id="about">
+        <div class="card-inner flex-row">
+          <div class="text-content">
+            <div class="card-header-with-leaf">
+              <svg class="leaf-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7 5 4 10 4 15c0 3.3 2.7 6 6 6 1.4 0 2.7-.5 3.7-1.3.3.4.7.8 1.1 1.1 1.2.9 2.7 1.2 4.2 1.2.3-1.8.1-3.6-.8-5.1-1.3-2.2-3.4-3.7-5.9-4.3C12.7 9.8 13.5 6 12 2z"/></svg>
+              <h2>About the Game</h2>
+            </div>
+            <p class="card-description">A fantasy world awaits you! Train your elf, complete daily challenges, explore beautiful locations and become the strongest elf in the realm.</p>
+            <button class="action-btn"><span>Learn More</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+          <div class="card-media castle-image"><img src="castle.jpg" alt="Enchanted fairy kingdom castle" loading="lazy" decoding="async"></div>
+        </div>
+      </section>
+
+      <section class="game-card card-stats-profile">
+        <div class="card-inner">
+          <div class="card-header-with-star"><span class="card-star-icon">✦</span><h2>Character Information</h2></div>
+          <div class="profile-details-grid">
+            <div class="profile-avatar-wrapper"><img src="box.png" alt="Elf Trainer portrait" loading="lazy" decoding="async"></div>
+            <div class="stats-table">
+              <div class="stat-row"><span class="stat-label">Name</span><span class="stat-value">: Elf Trainer</span></div>
+              <div class="stat-row"><span class="stat-label">Race</span><span class="stat-value">: Nature Elf</span></div>
+              <div class="stat-row"><span class="stat-label">Abilities</span><span class="stat-value">: Magic, Healing, Speed, Intelligence</span></div>
+              <div class="stat-row"><span class="stat-label">Strengths</span><span class="stat-value">: Kind, Brave</span></div>
+              <div class="stat-row"><span class="stat-label">Weaknesses</span><span class="stat-value">: Overthinking</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="game-card card-meet-elf">
+        <div class="card-inner">
+          <div class="card-header-with-leaf">
+            <svg class="leaf-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7 5 4 10 4 15c0 3.3 2.7 6 6 6 1.4 0 2.7-.5 3.7-1.3.3.4.7.8 1.1 1.1 1.2.9 2.7 1.2 4.2 1.2.3-1.8.1-3.6-.8-5.1-1.3-2.2-3.4-3.7-5.9-4.3C12.7 9.8 13.5 6 12 2z"/></svg>
+            <h2>Meet Your Elf</h2>
+          </div>
+          <p class="card-description">A kind-hearted elf with a great dream to protect nature and bring peace to the magical world.</p>
+          <button class="action-btn"><span>View Profile</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+        <div class="character-visual-wrapper gentle-elf-right"><img src="meet-elf.png" alt="Companion nature elf girl" loading="lazy" decoding="async"></div>
+      </section>
+
+      <section class="game-card card-challenge" id="challenges">
+        <div class="card-inner flex-row">
+          <div class="text-content">
+            <div class="card-header-with-icon">
+              <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"></path></svg>
+              <h2>365 Days Challenge</h2>
+            </div>
+            <p class="card-description">Complete daily tasks and collect rewards for an amazing year!</p>
+            <button class="action-btn"><span>View Challenges</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+          <div class="card-media badge-illustration"><img src="medal.png" alt="Golden star achievement medal" loading="lazy" decoding="async"></div>
+        </div>
+      </section>
+
+      <section class="game-card card-training" id="training">
+        <div class="card-inner">
+          <div class="flex-row">
+            <div class="text-content text-academy">
+              <div class="card-header-with-icon">
+                <svg class="dumbbell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11M6.5 17.5h11M12 2v20M4.5 12h15M2 12h2.5M19.5 12H22"/></svg>
+                <h2>Training Academy</h2>
+              </div>
+              <p class="card-description">Enhance your elf's abilities with special training sessions.</p>
+              <button class="action-btn"><span>Start Training</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+            <div class="skills-wrapper">
+              <div class="skill-row"><div class="skill-meta"><span class="skill-icon">✚</span><span class="skill-name">Magic</span></div><div class="progress-bar-container"><div class="progress-bar" style="width:80%"></div></div><span class="skill-percent">80%</span></div>
+              <div class="skill-row"><div class="skill-meta"><span class="skill-icon">🛡</span><span class="skill-name">Intelligence</span></div><div class="progress-bar-container"><div class="progress-bar" style="width:70%"></div></div><span class="skill-percent">70%</span></div>
+              <div class="skill-row"><div class="skill-meta"><span class="skill-icon">⚡</span><span class="skill-name">Speed</span></div><div class="progress-bar-container"><div class="progress-bar" style="width:75%"></div></div><span class="skill-percent">75%</span></div>
+              <div class="skill-row"><div class="skill-meta"><span class="skill-icon">🌿</span><span class="skill-name">Healing</span></div><div class="progress-bar-container"><div class="progress-bar" style="width:60%"></div></div><span class="skill-percent">60%</span></div>
+              <div class="skill-row"><div class="skill-meta"><span class="skill-icon">✿</span><span class="skill-name">Nature</span></div><div class="progress-bar-container"><div class="progress-bar" style="width:85%"></div></div><span class="skill-percent">85%</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="game-card card-explore" id="explore">
+        <div class="card-inner flex-row">
+          <div class="text-content explore-text">
+            <div class="card-header-with-icon">
+              <svg class="leaf-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg>
+              <h2>Explore the Elf World</h2>
+            </div>
+            <p class="card-description">Discover new places, complete quests and uncover hidden secrets.</p>
+            <button class="action-btn outline">
+              <span>Explore Map</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+
+          <div class="polaroid-row">
+            <figure class="polaroid p1"><div class="img-ph"><img src="forest.png" alt="Enchanted Forest" loading="lazy" decoding="async"></div><figcaption>Enchanted Forest</figcaption></figure>
+            <figure class="polaroid p2"><div class="img-ph"><img src="lake.png" alt="Crystal Lake" loading="lazy" decoding="async"></div><figcaption>Crystal Lake</figcaption></figure>
+            <figure class="polaroid p3"><div class="img-ph"><img src="garden.png" alt="Flower Valley" loading="lazy" decoding="async"></div><figcaption>Flower Valley</figcaption></figure>
+            <figure class="polaroid p4"><div class="img-ph"><img src="moon.png" alt="Moonlight Garden" loading="lazy" decoding="async"></div><figcaption>Moonlight Garden</figcaption></figure>
+          </div>
+        </div>
+        <img src="flower.png" alt="" class="edge-flower fl-explore" loading="lazy" decoding="async">
+      </section>
+
+      <section class="game-card card-rewards" id="rewards">
+        <div class="card-inner flex-row">
+          <div class="text-content">
+            <div class="card-header-with-icon">
+              <span class="card-star-icon trophy">🏆</span>
+              <h2>Achievements & Rewards</h2>
+            </div>
+            <p class="card-description">Unlock achievements, collect rewards and show off your progress!</p>
+            <button class="action-btn outline">
+              <span>View Rewards</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+          <div class="card-media gem-illustration img-ph">
+            <img src="trophy.png" alt="Crystal trophy" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </section>
+
+      <section class="game-card card-progress">
+        <div class="card-inner">
+          <div class="card-header-with-icon">
+            <svg class="dumbbell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 8h16M4 16h16M9 4v8M15 12v8"/></svg>
+            <h2>Your Progress</h2>
+          </div>
+          <div class="progress-body">
+            <div class="progress-ring" style="--pct: 75"><span>75%</span></div>
+            <ul class="goal-list">
+              <li>Complete 50 Challenges</li>
+              <li>Reach Level 10</li>
+              <li>Collect 5 Rewards</li>
+              <li>Explore All Locations</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="game-card card-gallery">
+        <div class="card-inner">
+          <div class="gallery-head">
+            <div>
+              <div class="card-header-with-star">
+                <span class="card-star-icon">✦</span>
+                <h2>Gallery</h2>
+              </div>
+              <p class="card-subtitle">A glimpse into your magical journey...</p>
+            </div>
+            <button class="action-btn">
+              <span>View More</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+          <div class="gallery-grid">
+            <div class="img-ph"><img src="https://i.pinimg.com/1200x/4e/6a/b1/4e6ab1a034e6394ea02c4e8d50f56323.jpg" alt="Gallery 1" loading="lazy" decoding="async"></div>
+            <div class="img-ph"><img src="https://i.pinimg.com/1200x/3d/96/5d/3d965d6aef8995a12eb30f9a9fb7697d.jpg" alt="Gallery 2" loading="lazy" decoding="async"></div>
+            <div class="img-ph"><img src="https://i.pinimg.com/1200x/55/2f/e7/552fe75f09259c0e0c10496044491b98.jpg" alt="Gallery 3" loading="lazy" decoding="async"></div>
+            <div class="img-ph"><img src="https://i.pinimg.com/736x/7d/a0/87/7da0871be23949430285ea16929f4822.jpg" alt="Gallery 4" loading="lazy" decoding="async"></div>
+            <div class="img-ph"><img src="https://i.pinimg.com/736x/59/96/6e/59966e584ca743195b6f18d2b0490a65.jpg" alt="Gallery 5" loading="lazy" decoding="async"></div>
+            <div class="img-ph"><img src="https://i.pinimg.com/736x/c2/ce/83/c2ce836b8cb73ec7b26e062954c9254e.jpg" alt="Gallery 6" loading="lazy" decoding="async"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <svg class="footer-leaf" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7 5 4 10 4 15c0 3.3 2.7 6 6 6 1.4 0 2.7-.5 3.7-1.3.3.4.7.8 1.1 1.1 1.2.9 2.7 1.2 4.2 1.2.3-1.8.1-3.6-.8-5.1-1.3-2.2-3.4-3.7-5.9-4.3C12.7 9.8 13.5 6 12 2z"/></svg>
+          <div>
+            <strong>HOW TO TRAIN<br>YOUR ELF</strong>
+            <em>Train • Explore • Achieve</em>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a><a href="#about">About</a><a href="#training">Training</a><a href="#challenges">Challenges</a>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <a href="#rewards">Rewards</a><a href="#settings">Settings</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-row">
+            <a href="#" aria-label="Discord">◎</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="Instagram">▣</a><a href="#" aria-label="X">✕</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <span>© 2025 How to Train Your Elf. All rights reserved.</span>
+        <span><span class="badge-star">✦</span> A Magical Journey Awaits...</span>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
